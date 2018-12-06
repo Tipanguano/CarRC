@@ -1,0 +1,23 @@
+{
+    "name": "carro",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "reset": "firmata-party mega --debug",
+        "start": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.4",
+        "firmata-party": "^1.5.9",
+        "johnny-five": "^1.0.0",
+        "socket.io-client": "^2.2.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.7"
+    }
+}
