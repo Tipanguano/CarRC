@@ -34,21 +34,25 @@ board.on('ready', function() {
 
     io.on('connection', function(socket) {
         socket.on('stop', function(data) {
+            console.log('frenado');
             motor3.stop();
             motor4.stop();
         });
 
         socket.on('start', function(data) {
+            console.log('acelerando');
             motor3.fwd(data.kmVelocidad);
             motor4.fwd(data.kmVelocidad);
         });
 
         socket.on('reverse', function(data) {
+            console.log('retrocediendo');
             motor3.rev(data.kmVelocidad);
             motor4.rev(data.kmVelocidad);
         });
 
         socket.on('left', function(data) {
+            console.log('girando');
             motor3.fwd(data.mVelocidadL);
             motor4.fwd(data.mVelocidadR);
         });
